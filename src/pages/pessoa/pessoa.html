@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Pessoa</ion-title>
+        <ion-buttons start>
+            <button ion-button icon-only (click)="salvarPessoa()">
+                <ion-icon name="md-checkmark-circle-outline"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <form #pessoaModelForm="ngForm" novalidate primary>
+        <ion-item>
+            <ion-label floating primary>Nome</ion-label>
+            <ion-input [(ngModel)]='pessoaModel.nome' name='nome' type="text" #username='ngModel' spellcheck="false" autocapitalize="off">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating primary>Idade</ion-label>
+            <ion-input [(ngModel)]="pessoaModel.idade" name="idade" type="number" #username="ngModel" spellcheck="false" autocapitalize="off">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating primary>Bairro</ion-label>
+            <ion-input [(ngModel)]='pessoaModel.bairro' name='bairro' type="text" #username='ngModel' spellcheck="false" autocapitalize="off">
+            </ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating primary>Telefone</ion-label>
+            <ion-input [(ngModel)]='pessoaModel.telefone' name='telefone' type="tel" #username='ngModel' spellcheck="false" autocapitalize="off">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating primary>E-mail</ion-label>
+            <ion-input [(ngModel)]='pessoaModel.email' name='email' type="email" #username='ngModel' spellcheck="false" autocapitalize="off">
+            </ion-input>
+        </ion-item>
+
+       <ion-item>
+            <ion-label floating primary>Facebook</ion-label>
+            <ion-input [(ngModel)]='pessoaModel.facebook' name='facebook' type="text" #username='ngModel' spellcheck="false" autocapitalize="off">
+            </ion-input>
+        </ion-item>
+    </form>
+</ion-content>
